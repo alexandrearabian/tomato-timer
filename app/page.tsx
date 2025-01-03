@@ -1,11 +1,10 @@
 import { Timer } from "./components/Timer";
 
-export const Home = ({ maxTime }: { maxTime: number }) => {
+export default function Home() {
+  const MAX_HOURS = 12;
   return (
     <>
-      <Timer maxTime={maxTime} />
+      <Timer maxTime={MAX_HOURS} />
     </>
   );
-};
-
-export default Home;
+}
