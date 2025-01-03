@@ -126,7 +126,7 @@ export const Timer = ({ maxTime }: { maxTime: number }) => {
     }
 
     return () => clearInterval(interval);
-  }, [isActive, onBreak]);
+  }, [isActive, onBreak, hours, minutes, seconds, handleBreak, toggleMode]);
 
   const validateAndSet = (value: string, unit: string) => {
     const numValue = value === "" ? 0 : Number(value);
@@ -231,3 +231,5 @@ export const Timer = ({ maxTime }: { maxTime: number }) => {
     </div>
   );
 };
+
+export default Timer;
