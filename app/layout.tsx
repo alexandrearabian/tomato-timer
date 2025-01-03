@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       </Head>
       <body className="bg-stone-800 text-stone-200">
-        <div className="flex flex-col items-center h-screen space-y-8 mt-16">
+        <div className="flex flex-col text-center items-center h-screen space-y-8 mt-16">
           <p className="text-8xl">🥫</p>
           <h1 className="text-6xl font-bold">Tomato Timer</h1>
           <p className="text-lg text-center sm:text-left">
