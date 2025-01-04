@@ -160,20 +160,29 @@ export const Timer = ({ maxTime }: { maxTime: number }) => {
   return (
     <div className="flex flex-col justify-center items-center space-y-4">
       {isActive || onBreak ? (
-        <div className="flex flex-col justify-center text-center items-center space-y-4">
-          <p className="text-2xl font-bold">{mode} time!</p>
-          <div className="flex justify-center text-center items-center space-x-2 text-4xl">
-            {String(hours || 0).padStart(2, "0")}:
-            {String(minutes || 0).padStart(2, "0")}:
-            {String(seconds || 0).padStart(2, "0")}
+        <>
+          <p className="text-xl font-bold">{mode} time!</p>
+          <div className="flex items-center space-x-2 text-2xl">
+            <p className="text-center bg-transparent border border-transparent w-16 h-16 text-inherit transition-all flex items-center justify-center cursor-default">
+              {String(hours || 0).padStart(2, "0")}
+            </p>
+            :
+            <p className="text-center bg-transparent border border-transparent w-16 h-16 text-inherit transition-all flex items-center justify-center cursor-default">
+              {String(minutes || 0).padStart(2, "0")}
+            </p>
+            :
+            <p className="text-center bg-transparent border border-transparent w-16 h-16 text-inherit transition-all flex items-center justify-center cursor-default">
+              {String(seconds || 0).padStart(2, "0")}
+            </p>
           </div>
           <div className="flex space-x-8">
             <Button onClick={handleStop}>Pause</Button>
           </div>
-        </div>
+        </>
       ) : (
         <>
-          <div className="flex justify-center text-center items-center space-x-2 text-4xl">
+          <p className="text-xl font-bold">{mode} time!</p>
+          <div className="flex text-center items-center space-x-2 text-2xl">
             <TimeInput
               placeholder="00"
               value={hours}

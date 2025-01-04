@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Tomato Timer",
@@ -16,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -27,12 +30,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
-      </Head>
+      </head>
       <body className="bg-stone-800 text-stone-200">
-        <div className="flex flex-col text-center items-center h-screen space-y-8 mt-16">
+        <div className="flex flex-col text-center items-center w-screen h-screen space-y-8 mt-16">
           <p className="text-8xl">🥫</p>
           <h1 className="text-6xl font-bold">Tomato Timer</h1>
-          <p className="text-lg text-center sm:text-left">
+          <p className="text-lg text-center">
             A simple Pomodoro Timer to help you focus.
           </p>
           <p className="text-sm">(max. {MAX_HOURS} hours)</p>

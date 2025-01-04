@@ -10,7 +10,7 @@ interface ButtonProps {
 export const Button = ({ children, onClick }: ButtonProps) => {
   return (
     <button
-      className="w-52 text-center bg-black/30 p-6 rounded-lg border-primary-light border hover:border-primary-accent hover:scale-105 transition-all"
+      className="w-36 text-center bg-black/30 p-4 rounded-lg border-primary-light border hover:border-primary-accent hover:scale-105 transition-all  ml-1 mr-1"
       onClick={onClick}
     >
       {children}
