@@ -158,11 +158,11 @@ export const Timer = ({ maxTime }: { maxTime: number }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center space-y-4">
+    <div className="flex flex-col justify-center items-center space-y-6">
       {isActive || onBreak ? (
         <>
           <p className="text-xl font-bold">{mode} time!</p>
-          <div className="flex items-center space-x-2 text-2xl">
+          <div className="flex items-center space-x-2 text-4xl">
             <p className="text-center bg-transparent border border-transparent w-16 h-16 text-inherit transition-all flex items-center justify-center cursor-default">
               {String(hours || 0).padStart(2, "0")}
             </p>
@@ -182,7 +182,7 @@ export const Timer = ({ maxTime }: { maxTime: number }) => {
       ) : (
         <>
           <p className="text-xl font-bold">{mode} time!</p>
-          <div className="flex text-center items-center space-x-2 text-2xl">
+          <div className="flex text-center items-center space-x-2 text-4xl">
             <TimeInput
               placeholder="00"
               value={hours}

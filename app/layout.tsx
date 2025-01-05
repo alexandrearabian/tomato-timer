@@ -35,13 +35,13 @@ export default function RootLayout({
         <div className="flex flex-col text-center items-center w-screen h-screen space-y-8 mt-16">
           <p className="text-8xl">🥫</p>
           <h1 className="text-6xl font-bold">Tomato Timer</h1>
-          <p className="text-lg text-center">
+          <p className="text-lg text-center px-8">
             A simple Pomodoro Timer to help you focus.
           </p>
           <p className="text-sm">(max. {MAX_HOURS} hours)</p>
           {children}
         </div>
-        <div className="text-center text-xs text-stone-400 mb-4">
+        <div className="text-center text-xs text-stone-400 mb-8">
           Sound Effect by{" "}
           <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6402">
             freesound_community
@@ -51,7 +51,7 @@ export default function RootLayout({
             Pixabay
           </a>
         </div>
-        <div className="absolute flex items-end ml-5 mb-5 inset-0 -z-10 left-1 transform -translate-x-1/8 -translate-y-1/2 ">
+        <div className="absolute flex items-end ml-5 mb-5 inset-0 -z-10 left-1 transform -translate-x-1/4 -translate-y-1/8 lg:translate-x-1/4 lg:-translate-y-1/4">
           <div className="w-96 h-96 bg-red-500 rounded-full filter blur-3xl opacity-50" />
         </div>
       </body>
